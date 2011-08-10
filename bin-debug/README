@@ -1,0 +1,11 @@
+A custom Adobe Flex Spark component.
+
+This component can be used as a loading placeholder when loading remote data.
+
+Usage:
+
+You can set an optional loading title which will be displayed along with the animated throbber.
+
+<container:LoadingPane skinClass="shinydesign.skin.LoadingPaneSkin" id="loadingPanel" height="300" width="400" loadingTitle="Loading Demo Data">
+...anything you like here
+</container>
