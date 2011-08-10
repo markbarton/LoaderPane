@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:container="shinydesign.container.*">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+					demoLoadingButton.label="Loading.."
+					//Tell the loading Panel we are loading
+					loadingPanel.loading=true;
+			}
+			
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				demoLoadingButton.label="Start Loading";
+				loadingPanel.dataLoaded=true;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:VGroup>
+		
+	<container:LoadingPane skinClass="shinydesign.skin.LoadingPaneSkin" id="loadingPanel" height="300" width="400" loadingTitle="Loading Demo Data">
+		<s:BorderContainer left="5" right="5" top="5" bottom="5" cornerRadius="5" backgroundColor="0xcccccc">
+			
+		<s:VGroup width="100%" height="100%" paddingTop="5" paddingBottom="5" paddingLeft="5" paddingRight="5">
+			<s:Label text="Foo Bar" fontSize="24" fontWeight="bold" />
+			
+		<s:TextArea width="100%" height="100%">
+			<s:text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Nam dui mi tincidunt quis.
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Nam dui mi tincidunt quis.
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Nam dui mi tincidunt quis.
+			</s:text>
+		</s:TextArea>
+		</s:VGroup>
+		</s:BorderContainer>
+		
+	</container:LoadingPane>
+	
+		<s:HGroup>
+			
+	<s:Button click="button1_clickHandler(event)" label="Start Loading" id="demoLoadingButton"/>
+	<s:Button click="button2_clickHandler(event)" label="Data Loaded" />
+		</s:HGroup>
+		
+	</s:VGroup>
+	
+</s:Application>
